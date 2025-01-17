@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `sge_nexus-erp` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `sge_nexus-erp`;
+CREATE DATABASE  IF NOT EXISTS `sge_nexuserp` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `sge_nexuserp`;
 -- MySQL dump 10.13  Distrib 8.0.27, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: sge_nexus-erp
+-- Host: 127.0.0.1    Database: sge_nexuserp
 -- ------------------------------------------------------
 -- Server version	8.0.27
 

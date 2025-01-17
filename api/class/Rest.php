@@ -4,7 +4,7 @@ class Rest{
     private $host  = 'localhost';
     private $user  = 'sge_user';
     private $password = 'nexusERPGRX25';
-    private $database  = 'sge_nexus-erp';      
+    private $database  = 'sge_nexuserp';      
     private $devTable = 'erp_devices';	
     private $mesTable = 'erp_mesures';	
 	private $dbConnect = false;
