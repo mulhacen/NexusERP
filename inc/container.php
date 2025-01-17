@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="http://nexus-erp.mulhacen.net" class="navbar-brand">NexusERP</a>
+          <a href="http://sge.mulhacen.net" class="navbar-brand">NexusERP</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
