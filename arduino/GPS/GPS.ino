@@ -8,12 +8,12 @@
 */
 
 TinyGPS gps;
-SoftwareSerial ss(3, 3);
+SoftwareSerial ss(4,3);
 
 void setup()
 {
-  Serial.begin(115200);
-  ss.begin(4800);
+  Serial.begin(9600);
+  ss.begin(9600);// importante a 9600 si es menos no va bien con neo 6
   
   Serial.print("Simple TinyGPS library v. "); Serial.println(TinyGPS::library_version());
   Serial.println("by Mikal Hart");
@@ -32,7 +32,7 @@ void loop()
     while (ss.available())
     {
       char c = ss.read();
-      // Serial.write(c); // uncomment this line if you want to see the GPS data flowing
+       Serial.write(c); // uncomment this line if you want to see the GPS data flowing
       if (gps.encode(c)) // Did a new valid sentence come in?
         newData = true;
     }
@@ -54,7 +54,7 @@ void loop()
   }
   
   gps.stats(&chars, &sentences, &failed);
-  Serial.print(" CHARS=");
+  Serial.print("\n\n CHARS=");
   Serial.print(chars);
   Serial.print(" SENTENCES=");
   Serial.print(sentences);
