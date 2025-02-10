@@ -1,36 +1,31 @@
 #include <SoftwareSerial.h>
 
-SoftwareSerial ble(14, 12); // RX, TX
+SoftwareSerial ble(14, 12); // RX, TX (GPIO no etiqueta placa)
 char caracter;
 
 void setup() {
-  // Open serial communications and wait for port to open:
+  // Instancia Serie Consola IDE
   Serial.begin(9600);
-
-
+  // Instancia Serie Modulo Bluetooth
   ble.begin(9600);
-  Serial.println("Version 7 - IDE");
-  ble.println("Version 7 - Movil");
-
+  // Imprimo y se muetra en la consola IDE - (Peticiones)
+  Serial.println("Version 8 - IDE");
+  // Imprimo y se muetra en el modulo bluetooth - (Respuestas)
+  ble.println("Version 8 - Movil");
+  // Peticion Nombre
   ble.write("AT+NAME\r\n");
-  
-
 }
 
 void loop() { // run over and over
- //  Serial.println("Leido de serie y enviado a ble:");
+    //Bucle para leer de la consola del IDE Arduino(Serial) y enviaro al modulo bluetooth(ble)
     while(Serial.available()){
- // if(Serial.available()){
       caracter = Serial.read();
       ble.write(caracter);
     }
-    //ble.println("\n");
-   // Serial.println("Leido de BLE y enviado a serie:");
+    //Bucle para leer del modulo bluetooth(ble) y mostrarlo en la consola del IDE(Serial)
     while(ble.available()){
-    //if(ble.available()){
       caracter = ble.read();
       Serial.write(caracter);
     }
-    //Serial.println("\n");
 
 }

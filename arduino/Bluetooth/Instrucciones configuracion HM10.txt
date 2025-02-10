@@ -1,0 +1,15 @@
+El modulo HM-10 debe configurarse con los siguientes comandos AT:
+
+AT+ROLE1       // Poner en modo maestro
+AT+IMME1       // Habilitar escaneo manual
+AT+RESET       // Reiniciar el módulo
+AT+TYPE1       // Asegurar escaneo abierto
+AT+SCAN9      // Aumentar tiempo de escaneo
+AT+POWE3       // Máxima potencia de transmisión
+AT+SHOW1       // Intentar mostrar nombres en el escaneo
+AT+DISI?       // Iniciar el escaneo de dispositivos BLE
+
+Se puede consultar si los cambios se han realizado correctamente usando los comandos sin el valor y añadiendo el carácter interregocacion
+
+Ejemplo: AT+ROLE?
+Ejemplo: AT+POWE?

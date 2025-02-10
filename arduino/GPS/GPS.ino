@@ -2,12 +2,7 @@
 
 #include <TinyGPS.h>
 
-/* This sample code demonstrates the normal use of a TinyGPS object.
-   It requires the use of SoftwareSerial, and assumes that you have a
-   4800-baud serial GPS device hooked up on pins 4(rx) and 3(tx).
-*/
-
-TinyGPS gps;
+TinyGPS gps;// Utilizamos la libreria Tiny GPS para facilitarnos la tarea
 SoftwareSerial ss(4,3);
 
 void setup()
@@ -15,9 +10,7 @@ void setup()
   Serial.begin(9600);
   ss.begin(9600);// importante a 9600 si es menos no va bien con neo 6
   
-  Serial.print("Simple TinyGPS library v. "); Serial.println(TinyGPS::library_version());
-  Serial.println("by Mikal Hart");
-  Serial.println();
+  Serial.print("V2 Proyecto "); Serial.println(TinyGPS::library_version());
 }
 
 void loop()
@@ -26,7 +19,7 @@ void loop()
   unsigned long chars;
   unsigned short sentences, failed;
 
-  // For one second we parse GPS data and report some key values
+  // Cada segundo vamos revisando los datos obtenidos del
   for (unsigned long start = millis(); millis() - start < 1000;)
   {
     while (ss.available())
