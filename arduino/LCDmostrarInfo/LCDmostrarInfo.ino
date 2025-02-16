@@ -17,7 +17,7 @@ void setup()
    lcd.clear();
    lcd.print("Hello World");
    lcd.setCursor(0, 1);
-   lcd.print("Millis ");
+   lcd.print("Arduino");
 }
 
 void loop()
